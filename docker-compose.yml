@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  selenium:
+    image: selenium/standalone-chrome:101.0.4951.41
+    container_name: selenium
+    networks:
+      - neopets-network
+    ports:
+      - 4444:4444
+      
+networks:
+   neopets-network:
+     driver: bridge
+     
+# commands:
+# docker-compose up
+# docker build -t <image-name:version> .
+# docker-compose run <image-name:version>
+# see the broser running on localhost:4444
